@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "name": "Grey fox",
+    "price": "80",
+    "topic": "forest",
+    "image": "./img/page_shop/forest1.png"
+  },
+  {
+    "id": "2",
+    "name": "White fox",
+    "price": "120",
+    "topic": "office",
+    "image": "./img/page_shop/office1.png"
+  },
+  {
+    "id": "3",
+    "name": "Red fox",
+    "price": "65",
+    "topic": "forest",
+    "image": "./img/page_shop/forest2.png"
+  },
+  {
+    "id": "4",
+    "name": "Black fox",
+    "price": "140",
+    "topic": "home",
+    "image": "./img/page_shop/home2.png"
+  },
+  {
+    "id": "5",
+    "name": "Purple fox",
+    "price": "125",
+    "topic": "home",
+    "image": "./img/page_shop/home1.png"
+  },
+  {
+    "id": "6",
+    "name": "Blue fox",
+    "price": "55",
+    "topic": "office",
+    "image": "./img/page_shop/office2.png"
+  },
+  {
+    "id": "7",
+    "name": "Rose fox",
+    "price": "105",
+    "topic": "forest",
+    "image": "./img/page_shop/forest3.png"
+  },
+  {
+    "id": "8",
+    "name": "Yellow fox",
+    "price": "90",
+    "topic": "office",
+    "image": "./img/page_shop/office3.png"
+  }
+]

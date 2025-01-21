@@ -1,0 +1,150 @@
+@use "../../variables";
+@use '../../breakpoints';
+
+.home_section {
+  //noinspection CssUnknownTarget
+  background-image: url("../img/main_img_1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  position: relative;
+  padding-bottom: 25%;
+
+  .header-home-page {
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+
+    @include breakpoints.sm_lg {
+      padding: 0 .5rem;
+    }
+
+    .wrapper_header {
+      display: flex;
+      max-width: 1000px;
+      flex: 1;
+      justify-content: space-between;
+      align-items: center;
+
+      .company-logo {
+        font-size: 1.5rem;
+        letter-spacing: 1.1px;
+        font-weight: 700;
+
+        @include breakpoints.sm_lg {
+          font-size: 1rem;
+        }
+
+        p {
+          span {
+            background-color: white;
+            color: black;
+          }
+        }
+      }
+
+      nav {
+        @include breakpoints.sm_lg {
+          order: -1;
+          //noinspection CssUnknownTarget
+          background-image: url("../img/dots.svg");
+          width: 20px;
+          height: 20px;
+          border: 2px solid white;
+          border-radius: 5px;
+          position: relative;
+
+          //.appear-menu
+          & > .pages-list {
+            //display: block;
+            position: absolute;
+
+            left: -1rem;
+            top: -1.7rem;
+            width: 100svw;
+            height: 100svh;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.91);
+
+            li {
+              border-bottom: 1px solid white;
+
+              a {
+                display: block;
+                padding: 0.8rem;
+              }
+
+              &:last-child {
+                color: #b4b2b2;
+                cursor: pointer;
+                padding: 0.8rem;
+
+                svg {
+                  width: 20px;
+                  height: 20px;
+                  display: block;
+                  margin: 0 auto;
+                }
+              }
+
+              transition: all .1s ease-in-out;
+
+              &:hover:not(:first-child) {
+                transform: scale(1.01);
+                display: block;
+                cursor: pointer;
+                background-color: rgba(38, 38, 38, 0.3);
+              }
+            }
+          }
+        }
+
+        .pages-list {
+          display: flex;
+          gap: 1.3rem;
+
+          @include breakpoints.sm_lg {
+            display: none;
+          }
+
+          .name-shop {
+            color: variables.$secondary_color;
+          }
+        }
+      }
+
+      .cart_icon {
+        position: relative;
+        svg {
+          height: 35px;
+          cursor: pointer;
+
+          @include breakpoints.sm_lg {
+            height: 25px;
+          }
+        }
+        .counter-items {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background-color: #e01717;
+          border-radius: 50%;
+          top: 0;
+          right: 0;
+          color: white;
+          display: none;
+          align-items: center;
+          justify-content: center;
+          font-size: .8rem;
+
+          @include breakpoints.sm_lg{
+            width: 12px;
+            height: 12px;
+            font-size: .6rem;
+          }
+        }
+      }
+    }
+  }
+}

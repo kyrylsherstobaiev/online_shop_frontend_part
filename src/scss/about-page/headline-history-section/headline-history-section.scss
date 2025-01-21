@@ -1,0 +1,36 @@
+@use '../../variables';
+@use '../../breakpoints';
+
+.headline-history {
+  background-color: #d5d4d4;
+  display: flex;
+  justify-content: center;
+
+  .wrapper-headline {
+    max-width: 1000px;
+    padding: 1.5rem 0;
+
+    @include breakpoints.sm_lg {
+      padding: .8rem 0;
+    }
+
+    p {
+      color: #949191;
+      font-size: .7rem;
+      text-align: center;
+      font-weight: 700;
+      letter-spacing: 1.3px;
+      margin-bottom: .6rem;
+    }
+
+    h1 {
+      letter-spacing: 1.3px;
+      font-weight: 900;
+      font-size: 2.2rem;
+
+      @include breakpoints.sm_lg {
+        font-size: 2rem;
+      }
+    }
+  }
+}

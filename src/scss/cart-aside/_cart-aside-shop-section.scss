@@ -1,0 +1,143 @@
+@use '../variables';
+@use '../breakpoints';
+
+
+//noinspection DuplicatedCode
+
+.cart-wrapper-aside {
+  position: fixed;
+  background-color: white;
+  right: 0;
+  top: 0;
+  height: 100dvh;
+  width: 35svw;
+  border: 1px solid green;
+  padding: 1rem;
+  color: #696868;
+  display: none; // flex !!!
+  flex-direction: column;
+  z-index: 2;
+
+  @include breakpoints.sm_lg {
+    width: 100svw;
+  }
+
+  .close-window-aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: .5rem;
+
+    svg {
+      width: 20px;
+    }
+  }
+
+  .headline-cart {
+    font-size: 2.5rem;
+
+    text-align: center;
+    margin-bottom: 1.2rem;
+  }
+
+  .card-item {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+
+    .description {
+      width: 40%;
+      font-size: .8rem;
+
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    .manipulation-card-item {
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .btns-qtydisplay {
+        display: flex;
+        align-items: center;
+        margin-bottom: .3rem;
+
+        .quantity-items {
+          color: white;
+          background-color: variables.$secondary_color;
+          padding: .3rem 1.2rem;
+          border-radius: 20px;
+          margin: 0 .2rem;
+
+        }
+
+        .btn-minus, .btn-plus {
+          border: none;
+          background-color: transparent;
+          color: #7e7c7c;
+          cursor: pointer;
+          border-radius: 50%;
+        }
+
+        .btn-plus {
+          font-size: 1.4rem;
+        }
+
+        .btn-minus {
+          font-size: 1.7rem;
+        }
+      }
+
+      .remove-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: .8rem;
+        cursor: pointer;
+
+
+        svg {
+          width: 15px;
+          height: 15px;
+          transform: translate(5%, 5%);
+        }
+      }
+    }
+
+  }
+
+  .total-price {
+    align-self: center;
+    text-align: center;
+    margin-top: auto;
+    width: 100%;
+
+    .total-headline {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    .summary {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: .4rem;
+    }
+
+    .btn-checkout {
+      width: 100%;
+      border: none;
+      background-color: variables.$secondary_color;
+      color: white;
+      padding: .6rem 0;
+      border-radius: 3px;
+    }
+  }
+}
+
+

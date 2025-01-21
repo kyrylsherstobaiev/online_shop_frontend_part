@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2_8 shop page</title>
+</head>
+<body id="shop-page">
+
+<section class="shop_section">
+    <header class="header-shop-page">
+        <div class="wrapper_header">
+            <div class="company-logo"><p>foxmind<span>ed</span></p></div>
+            <nav class="wrapper-pages-list">
+                <ul class="pages-list">
+                    <li class="name-shop">Shop</li>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">Our history</a></li>
+                    <li><a href="./shop-page.html">All fox</a></li>
+                    <li class="close-window-menu-switcher">
+                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                             xmlns="http://www.w3.org/2000/svg" fill="none"
+                             viewBox="0 0 24 24">
+                            <path stroke="#b4b2b2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M6 18 18 6m0 12L6 6"/>
+                        </svg>
+                    </li>
+                </ul>
+            </nav>
+            <div class="cart_icon">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                     fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.3L19 7H7.3"/>
+                </svg>
+                <div class="counter-items"></div>
+            </div>
+            <div class="cart-wrapper-aside">
+                <div class="close-window-aside">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                         xmlns="http://www.w3.org/2000/svg" fill="none"
+                         viewBox="0 0 24 24">
+                        <path stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M6 18 18 6m0 12L6 6"/>
+                    </svg>
+                </div>
+                <h2 class="headline-cart">CART</h2>
+                <div class="cards-wrapper-aside"></div>
+
+                <div class="total-price">
+                    <p class="total-headline">Total:</p>
+                    <p class="summary">USD<span class="total-sum">190.80</span></p>
+                    <button class="btn-checkout">Checkout</button>
+
+                </div>
+            </div>
+        </div>
+    </header>
+</section>
+<section class="headline-allfoxes">
+    <div class="wrapper-headline">
+        <p class="page">Home/shop-page</p>
+        <h1>All foxes</h1>
+    </div>
+</section>
+
+<section class="allfoxes">
+    <div class="wrapper-allfoxes">
+        <div class="allfoxes-filters">
+            <!--suppress HtmlFormInputWithoutLabel -->
+            <form role="search">
+                <label for="search">Search for stuff</label>
+                <input id="search" type="search" placeholder="Search..." autofocus required/>
+                <button type="submit">Go</button>
+            </form>
+
+            <div class="choose-topic">
+                <p>Topics</p>
+                <ul class="list-topics">
+                    <li data-topic="all">All</li>
+                    <li data-topic="forest">Forest</li>
+                    <li data-topic="office">Office</li>
+                    <li data-topic="home">Home</li>
+                </ul>
+            </div>
+            <div class="range-price">
+                <p>Filter price</p>
+                <!--suppress HtmlFormInputWithoutLabel -->
+                <input type="range" name="range" id="range" min="55" max="200"  class="range" value="200" step="1">
+                <p class="price-value">Value: $<span></span></p>
+            </div>
+        </div>
+        <div class="allfoxes-cards">
+            <div class="cards">
+<!--                <div class="card">-->
+<!--                    <div class="card-img">-->
+<!--                        <div class="img-wrapper">-->
+<!--                            <img src="./img/page_shop/forest1.png" alt="for1">-->
+<!--                        </div>-->
+<!--                        <div class="btn-add-tocard">-->
+<!--                            <p>add+</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="card-info">-->
+<!--                        <div class="fox-name">Gray fox:</div>-->
+<!--                        <div class="fox-price">$120</div>-->
+<!--                        <div class="fox-grade"><img src="./img/page_shop/stars.png" alt="stars"></div>-->
+<!--                        <div class="fox-topic">forest</div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="card">-->
+<!--                    <div class="card-img">-->
+<!--                        <div class="img-wrapper">-->
+<!--                            <img src="./img/page_shop/forest2.png" alt="for1">-->
+<!--                        </div>-->
+<!--                        <div class="btn-add-tocard">-->
+<!--                            <p>add+</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="card-info">-->
+<!--                        <div class="fox-name">Gray fox</div>-->
+<!--                        <div class="fox-price">$120</div>-->
+<!--                        <div class="fox-grade"><img src="./img/page_shop/stars.png" alt="stars"></div>-->
+<!--                        <div class="fox-topic">forest</div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="card">-->
+<!--                    <div class="card-img">-->
+<!--                        <div class="img-wrapper">-->
+<!--                            <img src="./img/page_shop/forest3.png" alt="for1">-->
+<!--                        </div>-->
+<!--                        <div class="btn-add-tocard">-->
+<!--                            <p>add+</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="card-info">-->
+<!--                        <div class="fox-name">Gray fox</div>-->
+<!--                        <div class="fox-price">$120</div>-->
+<!--                        <div class="fox-grade"><img src="./img/page_shop/stars.png" alt="stars"></div>-->
+<!--                        <div class="fox-topic">forest</div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="card">-->
+<!--                    <div class="card-img">-->
+<!--                        <div class="img-wrapper">-->
+<!--                            <img src="./img/page_shop/office1.png" alt="for1">-->
+<!--                        </div>-->
+<!--                        <div class="btn-add-tocard">-->
+<!--                            <p>add+</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="card-info">-->
+<!--                        <div class="fox-name">Gray fox</div>-->
+<!--                        <div class="fox-price">$120</div>-->
+<!--                        <div class="fox-grade"><img src="./img/page_shop/stars.png" alt="stars"></div>-->
+<!--                        <div class="fox-topic">forest</div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="card">-->
+<!--                    <div class="card-img">-->
+<!--                        <div class="img-wrapper">-->
+<!--                            <img src="./img/page_shop/office2.png" alt="for1">-->
+<!--                        </div>-->
+<!--                        <div class="btn-add-tocard">-->
+<!--                            <p>add+</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="card-info">-->
+<!--                        <div class="fox-name">Gray fox</div>-->
+<!--                        <div class="fox-price">$120</div>-->
+<!--                        <div class="fox-grade"><img src="./img/page_shop/stars.png" alt="stars"></div>-->
+<!--                        <div class="fox-topic">forest</div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="card">-->
+<!--                    <div class="card-img">-->
+<!--                        <div class="img-wrapper">-->
+<!--                            <img src="./img/page_shop/office3.png" alt="for1">-->
+<!--                        </div>-->
+<!--                        <div class="btn-add-tocard">-->
+<!--                            <p>add+</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="card-info">-->
+<!--                        <div class="fox-name">Gray fox</div>-->
+<!--                        <div class="fox-price">$120</div>-->
+<!--                        <div class="fox-grade"><img src="./img/page_shop/stars.png" alt="stars"></div>-->
+<!--                        <div class="fox-topic">forest</div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="card">-->
+<!--                    <div class="card-img">-->
+<!--                        <div class="img-wrapper">-->
+<!--                            <img src="./img/page_shop/home1.png" alt="for1">-->
+<!--                        </div>-->
+<!--                        <div class="btn-add-tocard">-->
+<!--                            <p>add+</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="card-info">-->
+<!--                        <div class="fox-name">Gray fox</div>-->
+<!--                        <div class="fox-price">$120</div>-->
+<!--                        <div class="fox-grade"><img src="./img/page_shop/stars.png" alt="stars"></div>-->
+<!--                        <div class="fox-topic">forest</div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="card">-->
+<!--                    <div class="card-img">-->
+<!--                        <div class="img-wrapper">-->
+<!--                            <img src="./img/page_shop/home2.png" alt="for1">-->
+<!--                        </div>-->
+<!--                        <div class="btn-add-tocard">-->
+<!--                            <p>add+</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="card-info">-->
+<!--                        <div class="fox-name">Gray fox</div>-->
+<!--                        <div class="fox-price">$120</div>-->
+<!--                        <div class="fox-grade"><img src="./img/page_shop/stars.png" alt="stars"></div>-->
+<!--                        <div class="fox-topic">forest</div>-->
+<!--                    </div>-->
+<!--                </div>-->
+            </div>
+            <div class="wrapper-btn-choose-all" data="all">
+                <button class="btn-choose-all">All foxes</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="footer">
+    <div class="wrapper-footer">
+        <div class="header-contacts">
+            <h3>Foxmind<span>ed</span></h3>
+            <ul>
+                <li>Lorem ipsum dolor sit. Lorem ipsum dolor.</li>
+                <li><a href="tel:6031112298">Call us: 603-111-2298</a></li>
+                <li class="social-media">
+                    <div><a href="#"><img src="./img/icons-footer/insta.png" alt="insta"></a></div>
+                    <div><a href="#"><img src="./img/icons-footer/telegram%201.png" alt="telegram"></a></div>
+                    <div><a href="#"><img src="./img/icons-footer/twitter%201.png" alt="twiter"></a></div>
+                </li>
+            </ul>
+        </div>
+        <div class="wrapper-lists">
+            <div>
+                <h3>Shop</h3>
+                <ul>
+                    <li>Lorem</li>
+                    <li>Lorem</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Products</h3>
+                <ul>
+                    <li>Lorem</li>
+                    <li>Lorem</li>
+                    <li>Lorem</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Collection</h3>
+                <ul>
+                    <li>Lorem</li>
+                    <li>Lorem</li>
+                    <li>Lorem</li>
+                    <li>Lorem</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Weekly updates</h3>
+                <ul>
+                    <li>Lorem</li>
+                    <li>Lorem</li>
+                    <li>Lorem</li>
+                    <li>Lorem</li>
+                </ul>
+            </div>
+            <div>
+                <h3>About us</h3>
+                <ul>
+                    <li>Lorem</li>
+                    <li>Lorem</li>
+                    <li>Lorem</li>
+                    <li>Lorem</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+</body>
+</html>

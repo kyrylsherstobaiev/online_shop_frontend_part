@@ -1,0 +1,47 @@
+@use '../../variables';
+@use '../../breakpoints';
+
+.home_section {
+  .main-home-page {
+
+    .wrapper-main-home-page {
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+
+
+      @include breakpoints.sm_lg {
+        padding: 1rem .5rem;
+      }
+
+      .headline-home-page {
+        max-width: 1000px;
+        margin-top: 10%;
+        flex: 1;
+
+        @include breakpoints.sm_lg {
+          margin-top: 5%;;
+        }
+
+        h2 {
+          font-size: 2.5rem;
+          @include breakpoints.sm_lg {
+            font-size: 1.5rem;
+          }
+
+        }
+
+        p {
+          font-size: 1.5rem;
+          width: 40%;
+          flex: 1;
+          @include breakpoints.sm_lg {
+            font-size: .9rem;
+          }
+        }
+      }
+    }
+  }
+
+
+}

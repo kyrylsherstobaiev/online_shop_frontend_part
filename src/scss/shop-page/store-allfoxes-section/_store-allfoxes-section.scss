@@ -1,0 +1,234 @@
+@use '../../variables';
+@use '../../breakpoints';
+
+.allfoxes {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+
+  .wrapper-allfoxes {
+    max-width: 1000px;
+    display: flex;
+    gap: 1.5rem;
+
+    @include breakpoints.sm_lg {
+      flex-direction: column;
+    }
+
+    .allfoxes-filters {
+      display: grid;
+      grid-template-rows: auto auto 1fr;
+      gap: .8rem;
+
+      form {
+        position: relative;
+        background: var(--color-brand);
+        border-radius: var(--rad);
+
+        input, button {
+          height: var(--height);
+          font-family: var(--font-fam);
+          border: 0;
+          color: var(--color-dark);
+        }
+
+        input[type="search"] {
+          outline: 0; // <-- shold probably remove this for better accessibility, adding for demo aesthetics for now.
+          width: 100%;
+          background: var(--color-light);
+          padding: 0 .4rem 0 1rem;
+          border-radius: var(--rad);
+          appearance: none; //for iOS input[type="search"] roundedness issue. border-radius alone doesn't work
+          transition: all var(--dur) var(--bez);
+          transition-property: width, border-radius;
+          z-index: 1;
+          position: relative;
+          color: #313131;
+        }
+
+        button {
+          display: none; // prevent being able to tab to it
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: var(--btn-width);
+          font-weight: bold;
+          background: var(--color-brand);
+          border-radius: 0 var(--rad) var(--rad) 0;
+        }
+
+        input:not(:placeholder-shown) {
+          border-radius: var(--rad) 0 0 var(--rad);
+          width: calc(100% - var(--btn-width));
+
+          + button {
+            display: block;
+          }
+        }
+
+        label {
+          position: absolute;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 0;
+          border: 0;
+          height: 1px;
+          width: 1px;
+          overflow: hidden;
+        }
+      }
+
+      .choose-topic {
+        font-size: .9rem;
+
+        .list-topics {
+          padding-top: .4rem;
+
+          li {
+            padding: .2rem 0 .2rem .6rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all .1s ease-out;
+
+            &:hover {
+              background-color: variables.$secondary_color;
+              color: white;
+              transform: scale(1.01);
+            }
+
+          }
+
+          @include breakpoints.sm_lg {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: .4rem;
+
+            li {
+              border: 2px solid variables.$secondary_color;
+              border-radius: 6px;
+              text-align: center;
+              color: variables.$secondary_color;
+            }
+          }
+        }
+      }
+
+      .range-price {
+        font-size: .9rem;
+        margin-top: .9rem;
+
+        .range {
+          margin-top: .6rem;
+          display: block;
+          width: 100%;
+          accent-color: coral;
+          outline: none;
+          border: none;
+        }
+
+        .price-value {
+          padding-top: .2rem;
+          text-align: center;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .allfoxes-cards {
+      .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: .6rem;
+
+        @include breakpoints.md {
+          gap: .3rem;
+        }
+        @include breakpoints.sm_lg {
+          grid-template-columns: 1fr;
+        }
+
+        .card {
+          position: relative;
+
+          .img-wrapper {
+
+            img {
+              width: 100%;
+              display: block;
+            }
+          }
+
+          .btn-add-tocard {
+            border: 1px solid orange;
+            display: inline-block;
+            text-align: center;
+            position: absolute;
+            top: .5rem;
+            right: .5rem;
+            background-color: white;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: .9rem;
+            padding: .2rem .5rem;
+            color: variables.$secondary_color;
+            cursor: pointer;
+          }
+
+          .card-info {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+
+            @include breakpoints.md {
+              gap: .2rem;
+              font-size: .9rem;
+            }
+
+            .fox-name {
+              white-space: nowrap;
+            }
+
+            .fox-grade {
+              display: flex;
+              align-items: center;
+              justify-content: end;
+
+              img {
+                display: block;
+                width: 100%;
+              }
+            }
+
+            .fox-topic {
+              color: #646363;
+              flex: 1;
+              text-align: right;
+              padding-right: .3rem;
+            }
+          }
+        }
+      }
+
+      .wrapper-btn-choose-all {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5rem;
+
+
+        .btn-choose-all {
+          padding: .7rem 5.8rem;
+          display: block;
+          border: none;
+          background-color: variables.$secondary_color;
+          color: white;
+          font-weight: 700;
+          cursor: pointer;
+
+          @include breakpoints.sm_lg {
+            flex: 1;
+            padding: .7rem 2.8rem;
+          }
+        }
+      }
+    }
+  }
+}
